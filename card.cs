@@ -86,7 +86,6 @@ namespace blackjack_simple_obj
 
         public override string ToString()
         {
-            /*return Is_Face_Up ? _card_value.ToString() : "*";*/
             return Is_Face_Up ? Card_Value.ToString() + SuitUtility.SuitToString(_suit) : "back";
         }
 

@@ -28,28 +28,8 @@ namespace blackjack
         {
             InitializeComponent();
             _game = new Game(2);
-            // Console.WriteLine(g.Decks.ToString());
             _game.Init_Decks(1);
 
-            //TextBlock tblk_dealer = new TextBlock();
-            //Binding dealer_cards = new Binding(_game.Players[0].CardsOnHandToString);
-            //tblk_dealer.SetBinding(TextBlock.TextProperty, dealer_cards);
-            //wrap_dealer.Children.Add(tblk_dealer);
-
-            //TextBlock tblk_player = new TextBlock();
-            //Binding player_cards = new Binding();
-            //player_cards.Source = _game.Players[1].CardsOnHandToString;
-            //player_cards.Path = new PropertyPath(_game.Players[1].CardsOnHandToString);
-            //tblk_player.SetBinding(TextBlock.TextProperty, player_cards);
-            //wrap_dealer.Children.Add(tblk_player);
-
-            //Binding player_score = new Binding(_game.Players[1].Score.ToString());
-            //tblk_score.SetBinding(TextBlock.TextProperty, player_score);
-
-            //Binding card_remaining = new Binding(_game.Multi_Deck_Cards_Remaining.ToString());
-            //tblk_card_remaining.SetBinding(TextBlock.TextProperty, card_remaining);
-            /*tblk_text.Text = _game.Decks.First().ToString();*/
-            /*Debug.WriteLine();*/
             _game.PropertyChanged += _game_PropertyChanged;
             _game.LogHandler += _game_LogHandler;
             _game.Deal_Cards();
@@ -107,8 +87,6 @@ namespace blackjack
 
         private void UpdateTexts()
         {
-            //tblk_dealer.Text = _game.Players[0].CardsOnHandToString;
-            //tblk_player.Text = _game.Players[1].CardsOnHandToString;
             sp_dealer_cards.Children.Clear();
             sp_player_cards.Children.Clear();
 
